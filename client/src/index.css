@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(240, 4.8%, 95.9%);
+  --muted-foreground: hsl(240, 3.7%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(240, 5.9%, 90%);
+  --input: hsl(240, 5.9%, 90%);
+  --primary: hsl(259, 90%, 64%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 4.8%, 95.9%);
+  --secondary-foreground: hsl(240, 5.9%, 10%);
+  --accent: hsl(240, 4.8%, 95.9%);
+  --accent-foreground: hsl(240, 5.9%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(259, 90%, 64%);
+  --radius: 0.5rem;
+  
+  /* Custom purple shades */
+  --purple-50: hsl(259, 100%, 97%);
+  --purple-100: hsl(259, 95%, 92%);
+  --purple-500: hsl(259, 90%, 64%);
+  --purple-600: hsl(259, 80%, 58%);
+  --purple-700: hsl(259, 70%, 50%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(259, 90%, 64%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(259, 90%, 64%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-purple {
+    background: linear-gradient(135deg, hsl(259, 90%, 64%) 0%, hsl(259, 80%, 58%) 100%);
+  }
+  
+  .text-purple-600 {
+    color: hsl(259, 80%, 58%);
+  }
+  
+  .bg-purple-600 {
+    background-color: hsl(259, 80%, 58%);
+  }
+  
+  .bg-purple-700 {
+    background-color: hsl(259, 70%, 50%);
+  }
+  
+  .bg-purple-50 {
+    background-color: hsl(259, 100%, 97%);
+  }
+  
+  .bg-purple-100 {
+    background-color: hsl(259, 95%, 92%);
+  }
+  
+  .hover\:bg-purple-700:hover {
+    background-color: hsl(259, 70%, 50%);
+  }
+  
+  .hover\:text-purple-600:hover {
+    color: hsl(259, 80%, 58%);
+  }
+  
+  .border-purple-600 {
+    border-color: hsl(259, 80%, 58%);
+  }
+  
+  .focus\:ring-purple-500:focus {
+    --tw-ring-color: hsl(259, 90%, 64%);
+  }
+}
